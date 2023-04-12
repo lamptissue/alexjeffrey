@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p5.js Analog Clock</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function setup() {
+        createCanvas(150, 150);
+        angleMode(DEGREES);
+      }
+
+      function draw() {
+        background(255);
+        translate(width / 2, height / 2);
+        rotate(-90);
+
+        let hr = hour();
+        let mn = minute();
+        let sc = second();
+
+        noFill();
+        stroke(0);
+        strokeWeight(2);
+        rectMode(CENTER);
+        let squareSize = 130;
+        let cornerRadius = 20;
+        rect(0, 0, squareSize, squareSize, cornerRadius);
+
+        // Draw seconds hand
+        stroke(0, 0, 0);
+        strokeWeight(2);
+        let secondAngle = map(sc, 0, 60, 0, 360);
+        line(0, 0, cos(secondAngle) * 60, sin(secondAngle) * 60);
+
+        // Draw minutes hand
+        stroke(0, 0, 0);
+        strokeWeight(4);
+        let minuteAngle = map(mn, 0, 60, 0, 360);
+        line(0, 0, cos(minuteAngle) * 50, sin(minuteAngle) * 50);
+
+        // Draw hours hand
+        stroke(0, 0, 0);
+        strokeWeight(6);
+        let hourAngle = map(hr % 12, 0, 12, 0, 360);
+        line(0, 0, cos(hourAngle) * 35, sin(hourAngle) * 35);
+
+        // Draw the center circle
+        stroke(0);
+        strokeWeight(4);
+        point(0, 0);
+      }
+    </script>
+  </body>
+</html>
