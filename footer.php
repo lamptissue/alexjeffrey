@@ -36,6 +36,8 @@ wp_nav_menu(
     </div><!-- .site-info -->
 </footer>
 
+</div>
+</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

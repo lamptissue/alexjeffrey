@@ -1,5 +1,5 @@
-
 <div class="container">
+
   <?php
   $args = array(
       'post_type' => 'post', 
@@ -17,8 +17,7 @@
       <div class="container content-container-modal">
           <div class="case-study img-shadow">
               <?php the_post_thumbnail(); ?>
-              <p>description</p>
-              <h2><?php the_title(); ?></h2>
+              <h2 class="mt3"><?php the_title(); ?></h2>
           </div>
           <div class="case-detail" style="display: none;">
               <div class="case-image"> <?php the_post_thumbnail(); ?></div>

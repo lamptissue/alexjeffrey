@@ -1,50 +1,5 @@
-
-<div class="test-container main-area flex justify-center align-center w-100">
-
-<div class="top-text w-40 flex justify-center align-center flex-column">
-        <?php if( get_field('top_text') ): ?>
-            <h1 class="tc"><?php the_title() ?></h1>
-        <p class="tl"><?php the_field('top_text'); ?></p>
-        <?php endif; ?>
-    </div>        
-
-
-<div class="w-60 img-shadow">
-        <?php if( get_field('hero_image') ): ?>
-        <img src="<?php the_field('hero_image'); ?>" />
-        <?php endif; ?>
-        </div>
-
-        </div>
-
-
-
-<!-- <div class="container">
-    <div class="test-container flex justify-center align-center w-100">
-    <div class="hero-image img-shadow w-50">
-    <?php if( get_field('hero_image') ): ?>
-        <img src="<?php the_field('hero_image'); ?>" />
-    <?php endif; ?>
-    </div>
-
-
-    <div class="tc top-text f4 mv4 w-50">
-        <?php if( get_field('top_text') ): ?>
-        <p><?php the_field('top_text'); ?></p>
-        <?php endif; ?>
-    </div>
-
-        </div>
-</div> -->
-
-
-
-
-
-<div class="mv6"></div>
-<!-- <hr> -->
-
-<?php
+<div class="main-area-test">
+    <?php
 $args = array(
     'post_type' => 'post',
     'category_name' => 'services',
@@ -60,19 +15,24 @@ if ($services_query->have_posts()) {
         ?>
         
     <div class="<?php echo $post_class; ?>">
-        <div class="content-container w-80 flex justify-center align-center">
-                <div class="service-image img-shadow w-50 flex justify-start align-center">
+        <div class="container">
+            <div class="content-container flex justify-center items-center">
+                <div class="service-image img-shadow w-50 flex justify-center items-center">
                     <?php the_post_thumbnail(); ?>
                 </div>
-                <div class="service-text tc w-50 pa5">
+                
+                <div class="service-text tc w-50 pa4">
                     <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>
                 </div>
-        </div>
-            
-        <?php if ($post_index < $services_query->post_count - 1) { ?>
-            <hr>
-            <?php } ?>
+            </div>
+    </div>
+
+    <hr/>
+            <!-- removes the last hr tag -->
+        <!-- <?php if ($post_index < $services_query->post_count - 1) { ?>
+            <hr/>
+            <?php } ?> -->
     </div>
         <?php
         $post_index++;
@@ -84,3 +44,26 @@ if ($services_query->have_posts()) {
 }
 wp_reset_postdata();
 ?>
+</div>
+
+<div class="bottom-area-test container pa3">
+    <div class="flex flex-column justify-center items-center w-100">
+        <div class="text-test flex-column flex items-center justify-center service-text">
+            <?php if( get_field('bottom_text') ): ?>
+            <?php the_field('bottom_text') ?>
+            <?php endif; ?>
+            <div class="btn-1 mt4">
+            <a href="/contact" class="button-link">Get in touch</a>
+        </div>
+        </div>
+       
+    </div>
+</div>
+
+
+
+        <!-- <div class="flex test-image-1 items-center justify-center img-shadow w-50"> 
+        <?php if( get_field('bottom_image') ): ?>
+            <img src="<?php the_field('bottom_image'); ?>" />
+            <?php endif; ?>
+        </div> -->

@@ -152,6 +152,12 @@ function alexjeffrey_scripts() {
 
 	wp_enqueue_style( 'alexjeffrey-custom',  get_template_directory_uri() . '/css/custom.css');
 
+	// wp_enqueue_script('alexjeffrey-barba', get_template_directory_uri() . '/js/barba.js');
+
+	// wp_enqueue_script('alexjeffrey-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true );
+
+
+
 	// Enqueue p5.js library
 	// wp_enqueue_script('p5-js', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js', array(), '1.4.0', true);
 
