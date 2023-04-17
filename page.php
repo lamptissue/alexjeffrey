@@ -22,7 +22,7 @@ get_header();
     <div class="w-100 w-60-l vh-50 vh-100-l cover bg-center">
     <?php if( get_field('hero_image') ): ?>
             
-            <div class="image-test" style="background-image: url('<?php the_field('hero_image'); ?>'); background-position: <?php the_field('background_position'); ?>;"></div>            
+            <div class="page-hero" style="background-image: url('<?php the_field('hero_image'); ?>'); background-position: <?php the_field('background_position'); ?>;"></div>            
             <?php endif; ?>
         </div>
 

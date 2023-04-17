@@ -46,7 +46,7 @@ wp_reset_postdata();
 ?>
 </div>
 
-<div class="bottom-area-test container pa3">
+<div class="service-contact container pa3">
     <div class="flex flex-column justify-center items-center w-100">
         <div class="text-test flex-column flex items-center justify-center service-text">
             <?php if( get_field('bottom_text') ): ?>
@@ -59,11 +59,3 @@ wp_reset_postdata();
        
     </div>
 </div>
-
-
-
-        <!-- <div class="flex test-image-1 items-center justify-center img-shadow w-50"> 
-        <?php if( get_field('bottom_image') ): ?>
-            <img src="<?php the_field('bottom_image'); ?>" />
-            <?php endif; ?>
-        </div> -->

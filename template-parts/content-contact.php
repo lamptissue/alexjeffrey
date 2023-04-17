@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="contact-container">
+    <div class="contact-container flex w-100 justify-around">
         <div class="contact-details">
             <h1 class="f2">Get in touch</h1>
             <?php
