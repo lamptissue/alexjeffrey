@@ -15,21 +15,22 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main mb6">
+<main id="primary" class="site-main mb6 "  >
+<!-- data-barba="container" data-barba-namespace="home"> -->
 
-	<div class="flex justify-center items-center w-100 mb5">
+<div class="flex flex-column flex-row-l justify-center items-center w-100 mb5">
 
-    <div class="w-100 w-60-l vh-50 vh-100-l cover bg-center">
-    <?php if( get_field('hero_image') ): ?>
-            
-            <div class="page-hero" style="background-image: url('<?php the_field('hero_image'); ?>'); background-position: <?php the_field('background_position'); ?>;"></div>            
-            <?php endif; ?>
-        </div>
+<!-- Hero Image -->
+    <div class="w-100 w-60-l">
+          <?php if( get_field('hero_image') ): ?>  
+          <div class="page-hero" style="background-image: url('<?php the_field('hero_image'); ?>'); background-position: <?php the_field('background_position'); ?>;"></div>            
+          <?php endif; ?>
+     </div>
 
-
-        <div class="top-text w-40 flex justify-center items-center flex-column">
-        <?php if( get_field('title') ): ?>
-                <h1 class="tc f1"><?php the_field('title') ?></h1>
+<!-- Text -->
+        <div class="top-text w-40-l w-100 flex pt7-l justify-center items-center flex-column">
+                <?php if( get_field('title') ): ?>
+                <h1 class="tc f1-l f2-m f3"><?php the_field('title') ?></h1>
                 <?php endif; ?>
                 <?php if( get_field('subtitle') ): ?>
                 <p class="tc i"><?php the_field('subtitle') ?></p>

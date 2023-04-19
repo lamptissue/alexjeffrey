@@ -12,7 +12,7 @@
 ?>
 
 <footer id="colophon" class="site-footer">
-    <div class="site-info ph4 pv2 white">
+    <div class="site-info ph4 pv3 pv2-l white">
         <div class="footer-name">
             <span class="f6">&copy; <?php bloginfo('name'); ?>  <?php echo date("Y"); ?></span>
         </div>

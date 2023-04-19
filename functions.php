@@ -156,6 +156,9 @@ function alexjeffrey_scripts() {
 
 	// wp_enqueue_script('alexjeffrey-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true );
 
+	// wp_enqueue_script("alexjeffrey-barb", "https://unpkg.com/@barba/core", array(), '1.0.0', true);
+
+	// wp_enqueue_script("alexjeffrey-gsap", "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js", array(), "3.x", true);
 
 
 	// Enqueue p5.js library
@@ -203,3 +206,11 @@ function theme_scripts() {
     wp_enqueue_script('custom_js');
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');
+
+function load_wpforms_styles() {
+    if ( function_exists( 'wpforms' ) ) {
+        wpforms()->frontend->assets_css();
+    }
+}
+add_action( 'wp_enqueue_scripts', 'load_wpforms_styles' );
+

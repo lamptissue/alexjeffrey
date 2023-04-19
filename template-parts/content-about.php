@@ -1,6 +1,6 @@
 <div class="container">
     <div class="flex items-center justify-center">
-        <div class="about-text tc w-80">
+        <div class="about-text tc w-100 w-80-l">
             <?php if( get_field('text_area_1') ): ?>
                 <?php the_field('text_area_1'); ?>
             <?php endif; ?>
@@ -9,7 +9,7 @@
 
     <hr/>
     <div class="flex items-center justify-center">
-        <div class="about-text tc w-80">
+        <div class="about-text tc w-100 w-80-l">
             <?php if( get_field('text_area_2') ): ?>
                 <?php the_field('text_area_2'); ?>
             <?php endif; ?>

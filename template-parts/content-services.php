@@ -1,4 +1,4 @@
-<div class="main-area-test">
+<div>
     <?php
 $args = array(
     'post_type' => 'post',
@@ -16,12 +16,12 @@ if ($services_query->have_posts()) {
         
     <div class="<?php echo $post_class; ?>">
         <div class="container">
-            <div class="content-container flex justify-center items-center">
-                <div class="service-image img-shadow w-50 flex justify-center items-center">
+            <div class="content-container flex flex-column flex-row-l justify-center items-center">
+                <div class="service-image img-shadow w-50-l w-100 flex justify-center items-center">
                     <?php the_post_thumbnail(); ?>
                 </div>
                 
-                <div class="service-text tc w-50 pa4">
+                <div class="service-text tc w-50-l w-100 pa4-l pa2">
                     <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>
                 </div>
@@ -46,13 +46,13 @@ wp_reset_postdata();
 ?>
 </div>
 
-<div class="service-contact container pa3">
+<div class="service-contact service-container w-100 w-80-m w-60-l pa3">
     <div class="flex flex-column justify-center items-center w-100">
-        <div class="text-test flex-column flex items-center justify-center service-text">
+        <div class="flex-column flex items-center justify-center service-text">
             <?php if( get_field('bottom_text') ): ?>
             <?php the_field('bottom_text') ?>
             <?php endif; ?>
-            <div class="btn-1 mt4">
+            <div class="btn-1 mt4 mb4 mb0-ns">
             <a href="/contact" class="button-link">Get in touch</a>
         </div>
         </div>

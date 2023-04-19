@@ -25,29 +25,52 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-barba="wrapper">
 
 <?php wp_body_open(); ?>
+<div class="overlay"></div>
+
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'alexjeffrey' ); ?></a>
 
-    <header id="masthead" class="site-header ph4 ">
+    <header id="masthead" class="site-header ph4 " >
         <div class="site-branding">
-		<h1 class="title f3 lh-title<?php echo ( is_front_page() ) ? ' home-page-title' : ''; ?>">
+		<h1 class="title f3 lh-title">
     <a href="/">
         <?php bloginfo('name'); ?>
     </a>
 </h1>
      </div><!-- .site-branding -->
+     <div class="menu-wrapper">
+        <div class="test-burger">
+     <div class="burger-menu ">
+        <span class="burger-menu-line <?php echo ( is_front_page() ) ? ' home-burger' : ''; ?>"></span>
+        <span class="burger-menu-line <?php echo ( is_front_page() ) ? ' home-burger' : ''; ?>"></span>
+        <span class="burger-menu-line <?php echo ( is_front_page() ) ? ' home-burger' : ''; ?>"></span>
+</div>
+</div>
 	 <!-- <div id="clock-container"></div> -->
-        <nav id="site-navigation" class="main-navigation <?php echo is_front_page() ? 'navbar-home' : ''; ?>">
-            <?php
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'menu-1',
-                    'menu_id'        => 'primary-menu',
-                )
-            );
-            ?>
-        </nav><!-- #site-navigation -->
+<div class="menu-right">
+<nav id="mobile-test" class="mobile-test" aria-label="Mobile Menu">
+    <?php
+    wp_nav_menu(
+        array(
+            'theme_location' => 'menu-1',
+            'menu_class'     => 'mobile-test',
+        )
+    );
+    ?>
+</nav>
+    </div>
+    </div>
+    <nav id="site-navigation" class="main-navigation <?php echo is_front_page() ? 'navbar-home' : ''; ?>">
+    <?php
+    wp_nav_menu(
+        array(
+            'theme_location' => 'menu-1',
+            'menu_id'        => 'primary-menu',
+        )
+    );
+    ?>
+</nav><!-- #site-navigation -->
     </header><!-- #masthead -->
