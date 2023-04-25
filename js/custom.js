@@ -51,39 +51,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Add this event listener for each link in the right menu
   rightMenuLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default link behavior
-      const targetUrl = event.target.href; // Store the target URL
+      event.preventDefault();
+      const targetUrl = event.target.href;
 
       mobileMenu.classList.remove("show");
       burgerMenu.classList.remove("open");
       overlay.classList.remove("active");
 
-      // Set a delay before the page is redirected
+      //sets a delay on the menu when a menu item has been clicked - allows for clean page transition
       setTimeout(() => {
-        window.location.href = targetUrl; // Redirect to the target URL
-      }, 500); // Adjust the delay time (in milliseconds) as needed
+        window.location.href = targetUrl;
+      }, 500);
     });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  barba.init({
-    transitions: [
-      {
-        leave(data) {
-          return gsap.to(data.current.container, {
-            opacity: 0,
-          });
-        },
-        enter(data) {
-          return gsap.from(data.next.container, {
-            opacity: 0,
-          });
-        },
-      },
-    ],
   });
 });

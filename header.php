@@ -15,6 +15,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alex is an industry-qualified conservation-led clockmaker who started working for a noted clockmaking company during term breaks whilst studying towards his undergrad in Engineering.">
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- Google Font -->
@@ -42,21 +44,20 @@
 </h1>
      </div><!-- .site-branding -->
      <div class="menu-wrapper">
-        <div class="test-burger">
+        <div class="burger-container">
      <div class="burger-menu ">
         <span class="burger-menu-line <?php echo ( is_front_page() ) ? ' home-burger' : ''; ?>"></span>
         <span class="burger-menu-line <?php echo ( is_front_page() ) ? ' home-burger' : ''; ?>"></span>
         <span class="burger-menu-line <?php echo ( is_front_page() ) ? ' home-burger' : ''; ?>"></span>
 </div>
 </div>
-	 <!-- <div id="clock-container"></div> -->
 <div class="menu-right">
-<nav id="mobile-test" class="mobile-test" aria-label="Mobile Menu">
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile Menu">
     <?php
     wp_nav_menu(
         array(
             'theme_location' => 'menu-1',
-            'menu_class'     => 'mobile-test',
+            'menu_class'     => 'mobile-menu',
         )
     );
     ?>

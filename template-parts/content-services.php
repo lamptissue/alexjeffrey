@@ -1,4 +1,6 @@
 <div>
+
+<!-- adds a class so that posts can alternate sides -->
     <?php
 $args = array(
     'post_type' => 'post',
@@ -21,7 +23,7 @@ if ($services_query->have_posts()) {
                     <?php the_post_thumbnail(); ?>
                 </div>
                 
-                <div class="service-text tc w-50-l w-100 pa4-l pa2">
+                <div class="service-text tc w-50-l w-100 pa4-l ph2 pt2">
                     <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>
                 </div>
@@ -45,6 +47,8 @@ if ($services_query->have_posts()) {
 wp_reset_postdata();
 ?>
 </div>
+
+<!-- Get in touch box -->
 
 <div class="service-contact service-container w-100 w-80-m w-60-l pa3">
     <div class="flex flex-column justify-center items-center w-100">

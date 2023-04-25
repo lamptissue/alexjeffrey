@@ -16,7 +16,6 @@ get_header();
 ?>
 
 <main id="primary" class="site-main mb6" >
-<!-- data-barba="container" data-barba-namespace="home"> -->
     <!-- hero image -->
     <section class="hero">
         <div class="home-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/John-Wilding-Skeleton.jpg');">
@@ -42,8 +41,7 @@ get_header();
                 <?php endif; ?>
             </div>    
 
-            <div class="flex items-center flex-column w-50-l w-100 ph4-l ph2 pb4-l test-home">
-
+            <div class="flex items-center flex-column w-50-l w-100 ph4-l ph2 pb4-l home-items">
                     <div class="tc home-text">
                     <?php if( get_field('main_text') ): ?>
                         <h2><?php the_field('main_text'); ?></h2>
@@ -69,7 +67,7 @@ get_header();
 
     <div class="container bottom-home">
         <div class="home-info-box flex w-100 flex flex-column flex-row-l justify-center items-center">
-            <div class="flex ph4-l ph2 pb4-l items-center flex-column w-50-l w-100 order-2 order1-l test-home">
+            <div class="flex ph4-l ph2 pb4-l items-center flex-column w-50-l w-100 order-2 order1-l home-items">
                 <div class="tc home-text">
                     <?php if( get_field('bottom_text') ): ?>
                         <h2><?php the_field('bottom_text'); ?></h2>
